@@ -27,6 +27,9 @@ url: "https://aychen5.github.io/" # the base hostname & protocol for your site, 
 twitter_username: aychen5
 github_username:  aychen5
 
+
+search_enabled: false
+
 # Build settings
 remote_theme: pmarsceill/just-the-docs
 plugins:
