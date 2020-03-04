@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: page
 title: About
 permalink: /about/
 nav_order: 1
 ---
 
 
-![profile pic]({{ https://aychen5.github.io/anniechen }}/images/PF.jpg "Hi! My name is Annie.")
-
+![profile-picture](/images/PF.jpg){:class="img-responsive"}
