@@ -5,4 +5,8 @@ permalink: /projects/
 nav_order: 2
 ---
 
-# projects
+
+Visualizing Ideological Scores and Political Polarization from Parliamentary Corpora:
+
+![App](https://annie-chen.shinyapps.io/poli-ideology/)
+

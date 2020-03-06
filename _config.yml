@@ -25,7 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "anniechen" # the subpath of your site, e.g. /blog
 url: "https://aychen5.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 #url: "http://localhost:4000" # for local testing
-twitter_username: aychen5
+twitter_username: AYChen555
 github_username:  aychen5
 
 # Enable or disable the site search
