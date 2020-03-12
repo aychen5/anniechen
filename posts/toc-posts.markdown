@@ -1,9 +1,8 @@
 ---
 layout: page
-title:  A first post!
+title:  Musings
 permalink: ./posts/
 has_children: true
 ---
-
 
 some random stuff

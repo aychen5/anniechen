@@ -1,8 +1,8 @@
 ---
 layout: page
-title:  This is the child
-parent: posts
+title:  a first post
+parent: Musings
 ---
 
 
-child of first post
+A first post
