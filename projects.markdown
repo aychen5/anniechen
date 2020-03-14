@@ -11,3 +11,7 @@ Visualizing Ideological Scores and Political Polarization from Parliamentary Cor
 <span class="fs-8">
 [App](https://annie-chen.shinyapps.io/poli-ideology/){: .btn}
 </span> 
+
+
+
+
