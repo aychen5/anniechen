@@ -6,4 +6,4 @@ has_children: true
 nav_order: 4
 ---
 
-some random stuff
+A collection of concepts and thoughts...

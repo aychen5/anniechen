@@ -7,7 +7,7 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-pacman::p_load(tidyverse, texreg, usmap)
+pacman::p_load(tidyverse, texreg, usmap, kableExtra)
 ```
 
 
@@ -21,16 +21,20 @@ covid_conf <- read_csv(file.path(path,"csse_covid_19_time_series/time_series_19-
 
 
 ```{r}
-glimpse(covid_conf)
+glimpse(long_covid)
 
 #wide to long data
 long_covid <- covid_conf %>% 
   pivot_longer(cols = c(5:length(covid_conf)),
                names_to = c("date")) %>% 
-  group_by(country = as_factor(`Country/Region`)) 
-
+  group_by(country = as_factor(`Country/Region`), date) 
 
 long_covid[long_covid$country == "China",]
+# summarize all the Chinese cases
+long_covid %>% 
+  #filter(country == "China")
+  group_by(as_factor(`Country/Region`), date) %>% 
+  summarize(mean)
 
 # time series
 long_covid %>% 
@@ -41,10 +45,11 @@ ggplot() +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
-#today 
+#today
+today <- unique(long_covid$date)[length(covid_conf)- 4]
 today_lag1 <- unique(long_covid$date)[length(covid_conf) - 5]
 long_covid %>% 
-  filter(date == today_lag1) %>% 
+  filter(date == today) %>% 
   filter(value >= 100) %>% 
   ggplot() +
   geom_bar(aes(x = country, y = value, fill = country), 
@@ -178,6 +183,32 @@ plot_usmap(data = us_covid_dat, values = "value", labels = TRUE) +
   theme(legend.title = element_blank())
 ```
 
+Time trend?
+```{r}
+us_covid %>% 
+  # don;t want the region
+  filter(value != 0 & !str_detect(state, ", ")) %>% 
+ggplot() +
+  geom_line(aes(x = date, y = value, 
+                group = state, col = state)) +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+
+
+Top ten states:
+```{r, results = 'asis'}
+us_covid %>% 
+  filter(date == today_lag1) %>% 
+  select(state = state, cases = value) %>% 
+  head(n = 10) %>% 
+  kable(format = "markdown")
+```
+
+
+
+
 When are the primaries/conventions for each state?
 
 Feb. 3 -- IOWA
@@ -205,5 +236,43 @@ Jun. 7 -- PUERTO RICO
 
 Am I able to create a synthetic control for each state...?
 
+Considerations:
+- SUTVA is likely violated.
+- propensity score to predict similarity of states in order to construct donor pool?
+    + but PS of what outcome?
+- which state are we interested in?
+    + Washington, which is the state with the greatest number of confirmed cases, has mail-in ballots
+    + as does California
+    + according to NYT:
+        * "Americans have been increasingly voting by mail: More than 23 percent of voters cast their ballots by mail in the 2016 presidential elections, up from about 12 percent in 2004."
+        * In the 2018 midterms, for example, states that permit voting by mail had, on average, a 15.5 percentage point higher turnout than states that did not. 
+        * elections entirely by mail: Colorado, Hawaii, Oregon and Washington
+        
+- perhaps we still see a drop off in voting...least of people's concerns?
+
+These are good resources
+```{r}
+resources <- list(
+  # ACLU
+  "https://www.aclu.org/news/voting-rights/keep-calm-and-carry-on-voting-how-to-vote-by-mail-during-the-coronavirus-outbreak/",
+  # good map/chart that summarizes state of mail/absentee voting in each state
+  "https://www.ncsl.org/research/elections-and-campaigns/absentee-and-early-voting.aspx",
+  # NYT summary
+  "https://www.nytimes.com/2020/03/12/opinion/coronavirus-election-vote-mail.html",
+  # VOTER ID laws
+  "https://ballotpedia.org/Voter_identification_laws_by_state"
+)
+
+# open all at once
+lapply(resources, browseURL)
+```
+
+
+
+
+```{r}
+library(Synth)
+
+```
 
 
