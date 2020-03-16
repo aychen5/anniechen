@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  'Understanding Multiple Hypothesis Testing 2'
-permalink: ./_posts/
+date:   2020-03-16
 ---
 
 Understanding Multiple Hypothesis Testing
