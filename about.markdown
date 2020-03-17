@@ -8,12 +8,15 @@ nav_order: 1
 
 
 
-Hello! I am a Master's student at McGill University in the Department of Political Science, and a member of the Centre for the Study of Democratic Citizenship (CSDC). 
+Hello! I am a graduate student at McGill University in the Department of Political Science, and a member of the Centre for the Study of Democratic Citizenship (CSDC). 
 
 {% comment %} 
-    I am broadly interested in methods of causal inference...Join me on my journey ... Always on the hunt for natural experiments.
+    I am broadly interested in deploying experimental design and statistical techniques to make causal inferences in service of social science questions. I study the intersection of voting behaviour and electoral institutions.
 {% endcomment %}
 
-Before coming to McGill, I received a B.A. at the University of Toronto, where I double majored in Political Science and Criminology.
+Before coming to McGill, I received a BA at the University of Toronto, where I double majored in Political Science and Criminology.
 
 ![profile-picture](/images/PF.jpg)
+
+
+<img src="/images/PF.jpg" alt="profile-picture" style="width:200px;height:400px;">

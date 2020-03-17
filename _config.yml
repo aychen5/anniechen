@@ -28,6 +28,8 @@ url: "https://aychen5.github.io/" # the base hostname & protocol for your site, 
 twitter_username: AYChen555
 github_username:  aychen5
 
+logo: "/images/shrug_logo.ico"
+
 # Enable or disable the site search
 search_enabled: true
 
