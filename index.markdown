@@ -22,7 +22,7 @@ layout: home
   background-color: RoyalBlue;
 }
 
-<button class="btn" href="https://github.com/aychen5"><i class="ab fa-github"></i> Github</button>
+<button class="btn" href="https://github.com/aychen5"><i class="fab fa-github"></i> Github</button>
 
 
 <span class="fab fa-github">
