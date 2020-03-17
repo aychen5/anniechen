@@ -2,7 +2,7 @@
 layout: default
 title: Artwork
 permalink: /artwork/
-nav_order: 3
+nav_order: 5
 ---
 
 ![floating-city](/images/floating_city.jpg)

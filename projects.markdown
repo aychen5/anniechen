@@ -5,6 +5,7 @@ permalink: /projects/
 nav_order: 2
 ---
 
+(Under construction)
 
 Visualizing Ideological Scores and Political Polarization from Parliamentary Corpora:
 
