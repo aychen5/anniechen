@@ -10,8 +10,4 @@ layout: home
 
 
 <a href="https://github.com/aychen5"><button class="btn"><i class="fab fa-github"></i> Github</button></a>
-
-
-<span class="fs-8">
-[Twitter](https://twitter.com/AYChen555){: .btn}
-</span>
+<a href="https://twitter.com/AYChen555"><button class="btn"><i class="fab fa-twitter"></i> Twitter</button></a>
