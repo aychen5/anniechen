@@ -6,13 +6,13 @@ layout: home
 
 ### Follow me on these platforms:
 
-<span class="fs-8">
+<span class="fas fa-camera">
 [Github](https://github.com/aychen5){: .btn}
-</span> 
+</span>
 
 <span class="fs-8">
 [Twitter](https://twitter.com/AYChen555){: .btn}
-</span> 
+</span>
 
 
 

@@ -2,7 +2,6 @@
 layout: post
 title:  "Build Jekyll Websites with knitr and blogdown"
 categories: [jekyll, rstats]
-permalink: ./_posts/
 tags: [blogdown, knitr, servr, httpuv, websocket]
 ---
 
