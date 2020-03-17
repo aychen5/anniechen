@@ -18,7 +18,7 @@ Before coming to McGill, I received a BA at the University of Toronto, where I d
 </td>
 <td>
 
-<img src="/images/PF.jpg" height="400" width="200"/>
+<img src="https://github.com/aychen5/anniechen/tree/master/images/PF.jpg" height="400" width="200"/>
 
 </td>
 </tr>
@@ -26,7 +26,7 @@ Before coming to McGill, I received a BA at the University of Toronto, where I d
 
 
 
-{% comment %} 
+{% comment %}
 
 
 [Centre for the Study of Democratic Citizenship](https://csdc-cecd.ca/)
