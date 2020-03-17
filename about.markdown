@@ -16,5 +16,4 @@ Hello! I am a graduate student at McGill University in the Department of Politic
 
 Before coming to McGill, I received a BA at the University of Toronto, where I double majored in Political Science and Criminology.
 
-
 ![profile-picture](/images/PF.jpg){:height="400px" width="200px"}
