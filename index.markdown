@@ -6,6 +6,8 @@ layout: home
 
 ### Follow me on these platforms:
 
+<script src="https://kit.fontawesome.com/c6b0f9749c.js" crossorigin="anonymous"></script>
+
 <span class="fas fa-camera">
 [Github](https://github.com/aychen5){: .btn}
 </span>
