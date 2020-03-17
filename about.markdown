@@ -18,11 +18,11 @@ Before coming to McGill, I received a BA at the University of Toronto, where I d
 </td>
 <td>
 
-<img src="/images/PF.jpg" alt="profilepicture" height="400" width="200">
+<img src="/images/PF.jpg" alt="profilepicture" height="400" width="200"></img>
 
 </td>
 </tr>
-</table
+</table>
 
 
 
