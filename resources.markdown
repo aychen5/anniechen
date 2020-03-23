@@ -8,8 +8,11 @@ nav_order: 6
 ## Learning from other folks
 
 [Brett Gall's Power Calculations for Conjoint Experiments](https://www.brettgall.com/post/conjoint-power-simulations/)
+
 [Michael Betancourt for all things Bayesian](https://betanalpha.github.io/writing/)
+
 [Michael DeCrescenzo's Causal Inference Readling List](https://mikedecr.github.io/teaching/causal-inf-2019/)
+
 [Vincent Bauer](https://stanford.edu/~vbauer/teaching.html)
 
 
