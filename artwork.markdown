@@ -5,6 +5,8 @@ permalink: /artwork/
 nav_order: 5
 ---
 
+### I also love to paint! Check out some of my work:
+
 ![floating-city](/images/floating_city.jpg)
 
 ![solo1](/images/solo1.jpg)
