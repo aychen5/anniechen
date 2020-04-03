@@ -18,7 +18,7 @@ Hello! I am a graduate student at McGill University in the Department of Politic
 
 <a href="https://github.com/aychen5"><button class="btn"><i class="fab fa-github"></i> Github</button></a>
 <a href="https://twitter.com/AYChen555"><button class="btn"><i class="fab fa-twitter"></i> Twitter</button></a>
-<a href="https://github.com/aychen5/cv/raw/master/annieychen_cv.pdf"><button class="btn"><i class="fab fa-file"></i> CV</button></a>
+<a href="https://drive.google.com/file/d/1agsNASFQreKcUVi9ghwtJKbI5lwDEPbf/view?usp=sharing"><button class="btn"><i class="far fa-file=pdf"></i> CV</button></a>
 
 
 
