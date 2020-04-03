@@ -7,19 +7,28 @@ nav_order: 6
 
 ## Learning from other folks
 
-[Brett Gall's Power Calculations for Conjoint Experiments](https://www.brettgall.com/post/conjoint-power-simulations/)
+[Brett Gall's power calculations for conjoint experiments](https://www.brettgall.com/post/conjoint-power-simulations/)
 
-[Michael Betancourt for all things Bayesian](https://betanalpha.github.io/writing/)
+[Michael Betancourt for all things bayesian](https://betanalpha.github.io/writing/)
 
-[Michael DeCrescenzo's Causal Inference Readling List](https://mikedecr.github.io/teaching/causal-inf-2019/)
+[Michael DeCrescenzo's causal inference readling list](https://mikedecr.github.io/teaching/causal-inf-2019/)
 
-[Vincent Bauer](https://stanford.edu/~vbauer/teaching.html)
+[Vincent Bauer's teaching material](https://stanford.edu/~vbauer/teaching.html)
 
 
 ## Favourite podcast episodes
 
-#### Casual Inference with Ellie Murray and Lucy D'Agostino McGowan
-[nternal and External Validity with Elizabeth Stuart | Episode 06](https://casualinfer.libsyn.com/internal-and-external-validity-with-elizabeth-stuart-episode-06-0) 
+#### BBC More or Less: Behind the Stats
+[Edith Abbott and crime statistics](https://www.bbc.co.uk/programmes/p07s22lh) 
 
-#### NYT: The Daily
+#### Casual Inference with Ellie Murray and Lucy D'Agostino McGowan
+[Internal and External Validity with Elizabeth Stuart | Episode 06](https://casualinfer.libsyn.com/internal-and-external-validity-with-elizabeth-stuart-episode-06-0) 
+
+#### NYT The Daily
 [This Tom Hanks Story Will Make You Feel Less Bad](https://www.nytimes.com/2020/03/15/podcasts/the-daily/tom-hanks-coronavirus.html?action=click&module=audio-series-bar&region=header&pgtype=Article) 
+
+#### 99% Invisible 
+[EPISODE 369 | Wait Wait…Tell Me!](https://99percentinvisible.org/episode/wait-wait-tell-me/) 
+
+#### NPR Planet Money 
+[Episode 898: Happy Fed Independence Day](https://www.npr.org/sections/money/2019/03/01/699546781/episode-898-happy-fed-independence-day) 
