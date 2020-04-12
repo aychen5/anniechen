@@ -24,7 +24,7 @@ Where \(\epsilon_U\) and \(\epsilon_L\) are the upper and lower equivalence boun
 
 An alternative way of thinking about this is using \\([100 \times (1 - 2 \alpha)]\%\\) confidence intervals to determine whether the interval estimate are within an equivalence range.
 
-```{r}
+```r
 ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
   stat_function(fun = dnorm, n = 101,
                 args = list(mean = 0, sd = 1)) +
@@ -37,10 +37,10 @@ ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
   theme_bw()
 ```
 
-![t-test](/images/t-test.png){:height="400px" width=1000px"}
+![t-test](/images/t-test.jpg)
 
 
-```{r}
+```r
 ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
   stat_function(fun = dnorm, n = 101, args = list(mean = -2, sd = 1)) +
   stat_function(fun = dnorm, n = 101, args = list(mean = 2, sd = 1)) +
@@ -55,4 +55,4 @@ ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
   theme_bw()
 ```
 
-![tost](/images/tost.png){:height="400px" width="1000px"}
+![tost](/images/tost.jpg)
