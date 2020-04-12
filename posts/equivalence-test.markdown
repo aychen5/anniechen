@@ -5,6 +5,9 @@ parent: Musings
 mathjax: true
 ---
 
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
 Equivalence Testing
 
 The routine "balance check" involves testing the null hypothesis that the treated and control groups are not significantly different from one another. Although the (conditional) ignorability assumption in causal inference is not directly testable -- the distribution of potential outcomes is unobservable; hence, "assumption" -- balance on the pre-treatment covariates provides evidence that this condition is satisfied. The conventional approach is based on the simple two sample t-test. If the treated sample diverges greatly from the control at some $\alpha$-level, we reject the null hypothesis defined as similarity of the groups (suggesting a violation of ignorability). Conversely, a failure to reject the null is taken as evidence that ignorability holds. The latter warrants further elaboration.
