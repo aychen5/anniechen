@@ -2,6 +2,7 @@
 layout: page
 title:  Equivalence Testing
 parent: Musings
+mathjax: true
 ---
 
 Equivalence Testing
