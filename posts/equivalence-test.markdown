@@ -10,7 +10,7 @@ mathjax: true
 
 Equivalence Testing
 
-The routine "balance check" involves testing the null hypothesis that the treated and control groups are not significantly different from one another. Although the (conditional) ignorability assumption in causal inference is not directly testable -- the distribution of potential outcomes is unobservable; hence, "assumption" -- balance on the pre-treatment covariates provides evidence that this condition is satisfied. The conventional approach is based on the simple two sample t-test. If the treated sample diverges greatly from the control at some $\alpha$-level, we reject the null hypothesis defined as similarity of the groups (suggesting a violation of ignorability). Conversely, a failure to reject the null is taken as evidence that ignorability holds. The latter warrants further elaboration.
+The routine "balance check" involves testing the null hypothesis that the treated and control groups are not significantly different from one another. Although the (conditional) ignorability assumption in causal inference is not directly testable -- the distribution of potential outcomes is unobservable; hence, "assumption" -- balance on the pre-treatment covariates provides evidence that this condition is satisfied. The conventional approach is based on the simple two sample t-test. If the treated sample diverges greatly from the control at some \\(\alpha\\)-level, we reject the null hypothesis defined as similarity of the groups (suggesting a violation of ignorability). Conversely, a failure to reject the null is taken as evidence that ignorability holds. The latter warrants further elaboration.
 
 As you might be aware, the failure to reject the null hypothesis of no difference *does not* mean that we can *accept* that there are no differences. In the frequentist tradition, the null hypothesis is set up as a point estimate. For instance, the mean difference \\(H_0: \mu_1 - \mu_2 = 0\\). If our test does not reject \\(\mu_1 - \mu_2 = 0\\), there is still a range of possible null values and there remains uncertainty about *which* null hypothesis is true. My favourite analogy for this is that rejecting the null is akin to a jury finding a defendant guilty -- there is sufficient evidence for jurors to be reasonably confident in the defendant's culpability. Whereas a non-guilty verdict is comparable to a failure to reject the null hypothesis. This second scenario may arise simply because the data we have falls short, which is to say, it is easy to conflate lack of power for null effects.
 
@@ -20,11 +20,11 @@ As Erin Hartman and Daniel Hildago point out, this backwards logic comes from co
 
 $$H_0: \frac{\mu_1 - \mu_2}{\sigma} \geq \epsilon_U ,  \frac{\mu_1 - \mu_2}{\sigma} \leq \epsilon_L$$
 
-Where $\epsilon_U$ and $\epsilon_L$ are the upper and lower equivalence bounds. Consider the juxtaposition of a two-sided t-test against two one-sided t-tests (one popular equivalence test) in the graphic below. In TOST, the null of difference is rejected if the p-value is less than $\alpha$ for both one-tailed tests.
+Where \(\epsilon_U\) and \(\epsilon_L\) are the upper and lower equivalence bounds. Consider the juxtaposition of a two-sided t-test against two one-sided t-tests (one popular equivalence test) in the graphic below. In TOST, the null of difference is rejected if the p-value is less than $\alpha$ for both one-tailed tests.
 
 An alternative way of thinking about this is using \\([100 \times (1 - 2 \alpha)]\%\\) confidence intervals to determine whether the interval estimate are within an equivalence range.
 
-```r
+```{r}
 ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
   stat_function(fun = dnorm, n = 101,
                 args = list(mean = 0, sd = 1)) +
@@ -36,3 +36,23 @@ ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
   labs(y = "Density", x = "", title = "Test of Difference") +
   theme_bw()
 ```
+
+![t-test](/images/t-test.png){:height="400px" width=1000px"}
+
+
+```{r}
+ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = -2, sd = 1)) +
+  stat_function(fun = dnorm, n = 101, args = list(mean = 2, sd = 1)) +
+  stat_function(fun = dnorm,  args = list(mean = -2, sd = 1),
+                xlim = c(-0.5, 5), geom = "area", alpha = 0.5) +
+  stat_function(fun = dnorm,  args = list(mean = 2, sd = 1),
+                xlim = c(-5, 0.5), geom = "area", alpha = 0.5) +
+  geom_vline(xintercept = c(-0.5, 0.5), lty = 2, col = "red") +
+  annotate("text", x = 0, y = 0.1, label = "alpha", parse = TRUE) +
+  annotate("text", x = 0, y = 0.3, label = "Reject null\n of difference", size = 2.8) +
+  labs(y = "Density", x = "", title = "Equivalence Test: Two One-sided T-tests") +
+  theme_bw()
+```
+
+![tost](/images/tost.png){:height="400px" width="1000px"}
