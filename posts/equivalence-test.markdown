@@ -19,3 +19,16 @@ $$H_0: \frac{\mu_1 - \mu_2}{\sigma} \geq \epsilon_U ,  \frac{\mu_1 - \mu_2}{\sig
 Where $\epsilon_U$ and $\epsilon_L$ are the upper and lower equivalence bounds. Consider the juxtaposition of a two-sided t-test against two one-sided t-tests (one popular equivalence test) in the graphic below. In TOST, the null of difference is rejected if the p-value is less than $\alpha$ for both one-tailed tests.
 
 An alternative way of thinking about this is using $[100 \times (1 - 2 \alpha)]\%$ confidence intervals to determine whether the interval estimate are within an equivalence range.
+
+`
+ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
+  stat_function(fun = dnorm, n = 101,
+                args = list(mean = 0, sd = 1)) +
+  geom_vline(xintercept = c(-1.96, 1.96), lty = 2, col = "red") +
+  stat_function(fun = dnorm,  xlim = c(-5,-1.96), geom = "area", alpha = 0.5) +
+  stat_function(fun = dnorm,  xlim = c(1.96, 5), geom = "area", alpha = 0.5) +
+  annotate("text", x = c(-2.6, 2.6), y = 0.05, label = "alpha/2", parse = TRUE) +
+  annotate("text", x = 0, y = 0.2, label = "Fail to reject null\n of no difference", size = 3) +
+  labs(y = "Density", x = "", title = "Test of Difference") +
+  theme_bw()
+`
