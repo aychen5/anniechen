@@ -2,7 +2,6 @@
 layout: page
 title:  Equivalence Testing
 parent: Musings
-mathjax: true
 ---
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
@@ -37,7 +36,7 @@ ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
   theme_bw()
 ```
 
-[t-test](/images/t-test.jpg)
+![t-test](/images/t-test.jpg)
 
 
 ```r
@@ -55,4 +54,4 @@ ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
   theme_bw()
 ```
 
-[tost](/images/tost.jpg)
+![tost](/images/tost.jpg)
