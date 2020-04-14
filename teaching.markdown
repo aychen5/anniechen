@@ -18,5 +18,5 @@ nav_order: 3
 
 ### Causal Inference Q&A
 
- <iframe src="/documents/notes_for_students.pdf" width="100%" height="500px">
+ <iframe src="https://aychen5.github.io//anniechen/documents/notes_for_students.pdf" width="100%" height="500px">
     </iframe>

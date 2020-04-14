@@ -36,7 +36,7 @@ ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
   theme_bw()
 ```
 
-![t-test](/posts/images/t-test.jpg)
+<img src="/posts/images/t-test.jpg">
 
 
 ```r
@@ -54,4 +54,4 @@ ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
   theme_bw()
 ```
 
-![tost](/posts/images/tost.jpg)
+<img src="/posts/images/tost.jpg">
