@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Teaching
 permalink: /teaching/
 nav_order: 3
@@ -18,5 +18,5 @@ nav_order: 3
 
 ### Causal Inference Q&A
 
- <iframe src="https://drive.google.com/open?id=11SlpppUDoYYxRB79m4oCxpMwCjeJXRWV" width="100%" height="500px">
+ <iframe src="/documents/notes_for_students.pdf" width="100%" height="500px">
     </iframe>

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title:  Equivalence Testing
 parent: Musings
 ---
@@ -36,7 +36,7 @@ ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
   theme_bw()
 ```
 
-![t-test](https://github.com/aychen5/anniechen/images/t-test.jpg)
+![t-test](/posts/images/t-test.jpg)
 
 
 ```r
@@ -54,4 +54,4 @@ ggplot(data = data.frame(x = c(-5, 5)), aes(x)) +
   theme_bw()
 ```
 
-![tost](https://github.com/aychen5/anniechen/images/tost.jpg)
+![tost](/posts/images/tost.jpg)
