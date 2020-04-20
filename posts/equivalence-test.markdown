@@ -19,7 +19,7 @@ As Erin Hartman and Daniel Hildago point out, this backwards logic comes from co
 
 $$H_0: \frac{\mu_1 - \mu_2}{\sigma} \geq \epsilon_U ,  \frac{\mu_1 - \mu_2}{\sigma} \leq \epsilon_L$$
 
-Where \(\epsilon_U\) and \(\epsilon_L\) are the upper and lower equivalence bounds. Consider the juxtaposition of a two-sided t-test against two one-sided t-tests (one popular equivalence test) in the graphic below. In TOST, the null of difference is rejected if the p-value is less than $\alpha$ for both one-tailed tests.
+Where \\(\epsilon_U\\) and \\(\epsilon_L\\) are the upper and lower equivalence bounds. Consider the juxtaposition of a two-sided t-test against two one-sided t-tests (one popular equivalence test) in the graphic below. In TOST, the null of difference is rejected if the p-value is less than \\(\alpha\\) for both one-tailed tests.
 
 An alternative way of thinking about this is using \\([100 \times (1 - 2 \alpha)]\%\\) confidence intervals to determine whether the interval estimate are within an equivalence range.
 
