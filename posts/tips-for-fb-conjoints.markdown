@@ -16,11 +16,9 @@ The process of fielding a web survey can be roughly split into two distinct comp
 
 There are a few of ways of doing this. The option that works for you depends on the resources available at your disposal, the amount of time you're willing to dedicate to the project, your familiarity with web-languages (i.e. `Javascript`, `HTML`, `PHP`, etc.), and how flexible you are with the design. I present them in order of decreasing $$$, though the approach most suitable for your purposes might not prioritize this factor. 
  
- - <h3 style="color:blue"> [Qualtrics' Product Experience package](https://www.qualtrics.com/marketplace/conjoint-package-analysis/):</h3>
- 
  - [Qualtrics' Product Experience package](https://www.qualtrics.com/marketplace/conjoint-package-analysis/): _"I'm rolling in the big bucks"_
  
-   + Full disclosure -- I have no experience using this service. This is Qualtrics' built-in product for conjoints; it is the expertly-design, albeit, pricey option. If your institution has the money to spare and you're looking to an easy-to-use tool, then this could be the way to go.
+   + Full disclosure: I have no experience using this service. This is Qualtrics' built-in product for conjoints; it is the expertly-design, albeit, pricey option. If your institution has the money to spare and you're looking to an easy-to-use tool, then this could be the way to go.
    
    
  - [Anton Strezhnev's Conjoint Survey Design Tool](https://github.com/astrezhnev/conjointsdt): _"Let's not break the bank (server-side method)"_ 
@@ -29,7 +27,7 @@ There are a few of ways of doing this. The option that works for you depends on 
     
     + As you might have noticed, this is not an entirely costless operation (both in terms of price and time). Granted, the price is peanuts compared to using the Qualtrics product. I should also mention that the process of setting up a web server itself can be more or less complicated depending on what you can afford. For instance, buying a domain from a separate company (say, GoDaddy) from your web host entails connecting the domain to the host server (say, Interserver; see changing NameServers [here](https://www.interserver.net/tips/kb/change-nameservers-godaddy/)). This is can be considerably more involved (especially if this is new to you -- as it was for me) than simply purchasing both from the same source. The tradeoff is price, though not by much if you shop around. Web hosting services usually go for something like US$ 5.00 monthly, or slightly discounted if you opt for an annual subscription.  
  
- -[Thomas Leeper's Javascript-based solution](https://github.com/leeper/conjoint-example): _"Let's not break the bank (client-side method)"_
+ - [Thomas Leeper's Javascript-based solution](https://github.com/leeper/conjoint-example): _"Let's not break the bank (client-side method)"_
  
    + An alternative to the above, and my preferred option, is to insert custom Javascript directly into Qualtrics. Essentially, you create an empty `HTML` table in the body of the survey question, and let the `Javascript` do the randomization behind the scenes to fill in the table. Leeper provides an excellent guide and code to do this with ease. I see a few advantages of this approach. First, the learning curve to implementing server-side solutions (option #2) can be steep, particularly if you have to learn how to use multiple softwares (and how they work in tandem) at once (all to accomplish a relatively simple task). While Leeper's approach necessitates some coding in `Javascript` and `HTML`, it is minimal, as the template provides all the structural components and customization is only a matter of "filling in the blanks" (adapting the attributes for your inquiry). The decision to adopt this client-side solution (meaning, it executes on the browser) or the server-side solution could depend, in part, on your familiarity with either scripting language (`Javascript` vs `PHP`), which directly influences your ability to customize the conjoint design. Nevertheless, a client-side fix is attractive because you don't have to deal with the overhead of web server maintenance. Additionally, one can presumably mobilize Node.js to reap server-side benefits using JS code -- but that's beyond my paygrade. 
    
@@ -48,7 +46,7 @@ Luckily, Qualtrics does most of the work for you. In general, Qualtrics automati
 
 ##### _Stay tuned for PART 2, which will detail survey distribution through Facebook Advertising._ 
  
-%{comment} 
+{% comment %}
 ### II. Facebook Targeted Advertising
  
  
@@ -60,4 +58,4 @@ Luckily, Qualtrics does most of the work for you. In general, Qualtrics automati
   
 #### Cost 
 
-%{comment} 
+{% endcomment %}
