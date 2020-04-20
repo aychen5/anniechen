@@ -7,12 +7,16 @@ mathjax: true
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
  
-The process of fielding a web survey can be roughly split into two distinct components: using the service that hosts the survey and deployment of your survey on a distrbution platform. With many services (like Qualtrics), there often exists an option to combine these steps, so that you may be minimally concerned about the sampling process. This guide specifically tackles the practical implementation of conjoint experiments on Qualtrics, disseminated through Facebook advertisements. If you are reading this, I assume you have some knowledge of the aims of conjoint analysis, have deemed that this design is appropriate for your research goals, and seek a practical means of carrying it out. I also assume that you have a working knowledge of Qualtrics. Obligatory caveat: I am by no means an expert in web development. These tips are derived from my experience figuring out how to do this, and may not reflect the most efficient modes of implementation.
+The process of fielding a web survey can be split into two distinct components: using the service that hosts the survey and deployment of your survey on a distrbution platform. With many services (like Qualtrics), there often exists an option to combine these steps, so that you may be minimally concerned about the sampling process. This guide specifically tackles the practical implementation of conjoint experiments on Qualtrics disseminated through Facebook advertisements. 
+
+If you are reading this, I assume you have some knowledge of the aims of conjoint analysis, have deemed that this design is appropriate for your research goals, and seek the means to carry it out. I also assume that you have a working knowledge of Qualtrics. 
+
+Obligatory caveat: I am by no means an expert in web development. These tips are derived from my experience figuring out how to do this, and may not reflect the most efficient modes of implementation.
  
  
-## PART 1: Constructing Conjoints Surveys
+## PART 1: Building Conjoints Surveys in Qualtrics
  
-### i) Set-up in Qualtrics
+### i) The options 
 
 There are a few of ways of doing this. The option that works for you depends on the resources available at your disposal, the amount of time you're willing to dedicate to the project, your familiarity with web-languages (i.e. `Javascript`, `HTML`, `PHP`, etc.), and how flexible you are with the design. I present them in order of decreasing $$$, though the approach most suitable for your purposes might not prioritize this factor. 
  
@@ -20,7 +24,7 @@ There are a few of ways of doing this. The option that works for you depends on 
  
    + Full disclosure -- I have no experience using this service. This is Qualtrics' built-in product for conjoints; it is the expertly-design, albeit, pricey option. If your institution has the money to spare and you're looking to an easy-to-use tool, then this could be the way to go.
 
-<br></br>
+<br>
    
  - [Anton Strezhnev's Conjoint Survey Design Tool](https://github.com/astrezhnev/conjointsdt): _"Let's not break the bank (server-side method)"_ 
  
@@ -39,7 +43,6 @@ There are a few of ways of doing this. The option that works for you depends on 
 ```js
 Qualtrics.SurveyEngine.addOnload(function()
 {
-
 // These are the attributes
 var attRaw = ["Family", "Occupation", "Ethnicity", "Religion"];
 var att = ["Family", "Occupation", "Ethnicity", "Religion"];
@@ -51,27 +54,24 @@ for (i=0; i < attRaw.length; i++) {
   attributes[i] = att[random1];
   att.splice(random1,1);
 }
-
 });
 ```
       
-      * Sometimes, researchers also would like to keep elements constant within subject, but allow them to vary across subjects. In the context of conjoint analysis, this means retaining the order of attributes across tasks for each respondent, while randomizing the order that they are presented per survey. To accomplish this, we can create an embedded data variable that captures the order, then pipe this variable into subsequent tasks. Say, your experiment consists of 2 conjoint tasks. In the first task, it is business as usual. Copy and paste the code above into the addOnload segment of the JS (in addition to the rest of the conjoint code). Then, two commands are key: `setEmbeddedData()` and `getEmbeddedData()`. I create a new variable, `attrorder` that saves the order from the first task like so: 
+    * Sometimes, researchers would like to keep elements constant within subject, but allow them to vary across subjects. In the context of conjoint analysis, this means retaining the order of attributes across tasks for each respondent, while randomizing the order that they are presented per survey. To accomplish this, we can create an embedded data variable that captures the order, then pipe this variable into subsequent tasks. Say, your experiment consists of 2 conjoint tasks. In the first task, it is business as usual. Copy and paste the code above into the addOnload segment of the JS (in addition to the rest of the conjoint code). Then, two commands are key: `setEmbeddedData()` and `getEmbeddedData()`. I create a new variable, `attrorder` that saves the order from the first task like so: 
       
 ```js
 // Store values as embedded data fields
 Qualtrics.SurveyEngine.setEmbeddedData('attrorder', attributes); 
 ```
      
-     * Then, in the second task on the next survey page, you can omit the re-randomization of attributes and grab the order variable you created in the previous step. Note that this will not work unless the tasks are on separate pages, because the JS is executed and updated by page. Also, a friendly reminder that you also need to declare the embedded data variable in your Survey Flow (leaving the value empty).
+    * Then, in the second task on the next survey page, you can omit the re-randomization of attributes and grab the order variable you created in the previous step. Note that this will not work unless the tasks are on separate pages, because the JS is executed and updated by page. Also, a friendly reminder that you also need to declare the embedded data variable in your Survey Flow (leaving the value empty).
      
 ```js
 // Attribute order from previous conjoint task
 var attributes = Qualtrics.SurveyEngine.getEmbeddedData('attrorder');
 ```     
-
-     * Lastly, 
  
- - [Shiny Application](https://medium.com/@joyplumeri/using-r-shiny-to-create-web-surveys-display-instant-feedback-and-store-data-on-google-drive-68f46eea0f8b): _"Flat broke, but rich in time"_
+ - [Shiny Application](https://medium.com/@joyplumeri/using-r-shiny-to-create-web-surveys-display-instant-feedback-and-store-data-on-google-drive-68f46eea0f8b): _"Flat broke, but I got time"_
  
    + Okay, so I include this option just to say that it is feasible. I've linked a more generic guide on creating and hosting surveys using a Shiny app (not a conjoint), and then storing responses on Google Drive. Perhaps not ideal for academic research (for security reasons), and usurps more time and effort than you'd like, but maybe worth exploring if you'd like to develop a new skill. 
 
@@ -92,7 +92,6 @@ table td:last-child {
 tr:nth-of-type(odd) { 
   background: #eee; 
 }
-
 /* Change the look for specific device */
 @media only screen and (max-width: 600px) {
   table {
