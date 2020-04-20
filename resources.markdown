@@ -5,15 +5,22 @@ permalink: /resources/
 nav_order: 6
 ---
 
-## Learning from other folks
+## Learning from other folks (probably more for me.)
 
+### General
 [Brett Gall's power calculations for conjoint experiments](https://www.brettgall.com/post/conjoint-power-simulations/)
 
-[Michael Betancourt for all things bayesian](https://betanalpha.github.io/writing/)
-
+### Causal Inference
 [Michael DeCrescenzo's causal inference readling list](https://mikedecr.github.io/teaching/causal-inf-2019/)
 
+[Matt Blackwell's teaching material](https://mattblackwell.org/teaching/gov2002/)
+
 [Vincent Bauer's teaching material](https://stanford.edu/~vbauer/teaching.html)
+
+### Bayesian Inference
+[Michael Betancourt for all things Bayesian](https://betanalpha.github.io/writing/)
+
+[Richard McElreath's Statistical Rethinking lectures](https://youtu.be/4WVelCswXo4)
 
 
 ## Favourite podcast episodes
