@@ -14,7 +14,7 @@ If you are reading this, I assume you have some knowledge of the aims of conjoin
 Obligatory caveat: I am by no means an expert in web development. These tips are derived from my experience figuring out how to do this, and may not reflect the most efficient modes of implementation.
  
  
-## PART 1: Building Conjoints Surveys in Qualtrics
+## PART 1: Building Conjoints in Qualtrics
  
 ### i) The options 
 
