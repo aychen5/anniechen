@@ -7,7 +7,9 @@ mathjax: true
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-In [PART 1](https://aychen5.github.io//anniechen/posts/tips-for-fb-conjoints.html), we reviewed some of the ways to fashion conjoint experiments on Qualtrics. There is one more (optional, but recommended) step before we move on to survey circulation through Facebook.
+In [PART 1](https://aychen5.github.io//anniechen/posts/tips-for-fb-conjoints.html), we reviewed some of the ways to fashion conjoint experiments on Qualtrics. There is one more (optional, but recommended) step before we move on to survey circulation through Facebook -- designing conjoints for mobile distribution. 
+
+But first, an bligatory caveat, which should go without saying, but in case you skipped PART 1: I am not an app developer.
 
 ## PART 2: Optimizing Conjoints for Mobile Devices
 
@@ -35,15 +37,31 @@ tr:nth-of-type(odd) {
 }
 ```
 
-Additionally, reducing the complexity of the experiment may be more critical on mobile devices than on desktop. There is some evidence to this effect ([Couper, Antoun, and Mavletova (2017)](https://onlinelibrary.wiley.com/doi/10.1002/9781119041702.ch7)). Yet, as researchers, our concern lies primarily with data quality. The fear is that a design that becomes too minimal might fail to convey the appropriate information. Therefore, the aim is to elicit responses in a manner that preserves the integrity of the conjoint while also ensuring that the conjoint is sufficiently simple in order to maximize number of responses. As it will become evident in my list of tips, there are some research inquiries that are simply not suitable for mobile adaptation.  
+Additionally, reducing the complexity of the experiment may be more critical on mobile devices than on desktop. For example, smartphone users tend to skip more questions and take longer to reach survey completion ([Tourangeau et al. (2017)](https://academic-oup-com.proxy3.library.mcgill.ca/poq/article/81/4/896/4718546) provides a good summary). Also see [Couper, Antoun, and Mavletova (2017)](https://onlinelibrary.wiley.com/doi/10.1002/9781119041702.ch7)). Yet, as researchers, our concern lies primarily with data quality. The good news is that the literature suggests there is little to be concerned about regarding data quality from smartphone vs desktop participants ([Tourangeau et al. (2017)](https://academic-oup-com.proxy3.library.mcgill.ca/poq/article/81/4/896/4718546); [Antoun, Couper, and Conrad (2017)](https://academic.oup.com/poq/article-abstract/81/S1/280/3091905?redirectedFrom=fulltext)). The fear is that a design that becomes too minimal might fail to convey the appropriate information. Therefore, the aim is to elicit responses in a manner that preserves the integrity of the conjoint while also ensuring that the conjoint is sufficiently simple in order to maximize number of responses. As it will become evident in my list of tips, there are some research inquiries that are simply not suitable for mobile adaptation.  
 
-  - Reduce length of attribute descriptions.
+  1. Reduce length of attribute descriptions. Ditto for descriptors of the levels within each attribute item.
   
-  - Minimize the number of attributes tested. 
+  2. Minimize the number of attributes tested. Together, the goal of number 1. and 2. is to limit the amount of scrolling necessary to access all the information required to answer questions.
   
-  - Adding imagery.
+  3. Take advantage of Qualtrics' ["request response" feature](https://www.qualtrics.com/support/survey-platform/survey-module/editing-questions/validation/#RequestResponse). If there is some unavoidable degree of scrolling involved, consider accompanying the question(s) with a reminder validating empty responses (a pop-up when Qualtrics detects unanswered questions). It has been shown that response-order effects are more substantial in smartphone-collected data, partly due to the scrolling issue. Validation is one way of combatting that.
+  
+  4. Incorporate imagery. This does not have to take the form of pictures embedded in profiles themselves. Instead, you might add a photo to the vignette introducing the conjoint experiment. 
+  
+  5. Implement a forced-choice conjoint. In a related vein, consider sticking with the dual-profile design. A significant departure from tasks with 2 profiles risks greater cognitive taxation.
 
-All these points implicitly speak to what Tourangeau et al. (2017) call "visual prominence -- the idea that respondents are more likely to notice and consider information that is easy to see."
+All these points speak to what [Tourangeau et al. (2017)](https://academic-oup-com.proxy3.library.mcgill.ca/poq/article/81/4/896/4718546) call "visual prominence -- the idea that respondents are more likely to notice and consider information that is easy to see." While these aren't hard and fast rules, it's implicit that, taken together, a 10-attribute, 10-task, 4-profile rating-based conjoint -- that's (\\(10 \times 10 \times 4 \times 8 = 3,200\\)) observations _per respondent_ -- is probably not a good idea. The rule-of-thumb, then, is that with increasing design complexity (i.e., more profiles, more tasks), XXX
+
+### Sources:
+
+[Antoun, Couper, and Conrad (2017)](https://academic.oup.com/poq/article-abstract/81/S1/280/3091905?redirectedFrom=fulltext)
+
+[Mick P. Couper  Christopher Antoun  Aigul Mavletova. 2017.](https://onlinelibrary.wiley.com/doi/10.1002/9781119041702.ch7)] Mobile Web Surveys: A Total Survey Error Perspective. _Total Survey Error in Practice, Chapter 7._
+
+[Tourangeau et al. (2017)](https://academic-oup-com.proxy3.library.mcgill.ca/poq/article/81/4/896/4718546) Web Surveys by Smartphone and Tablets: Effects on Survey Responses. _Public Opinion Quarterly._
+
+#### _Articles are gated. Sorry!_
+
+<br>
 
 #### _Stay tuned for [PART 3](https://aychen5.github.io//anniechen/posts/tips-for-fb-conjoints-3.html), which will detail survey distribution through Facebook Advertising._ 
 
