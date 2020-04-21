@@ -57,14 +57,18 @@ for (i=0; i < attRaw.length; i++) {
 });
 ```
       
-    * Sometimes, researchers would like to keep elements constant within subject, but allow them to vary across subjects. In the context of conjoint analysis, this means retaining the order of attributes across tasks for each respondent, while randomizing the order that they are presented per survey. To accomplish this, we can create an embedded data variable that captures the order, then pipe this variable into subsequent tasks. Say, your experiment consists of 2 conjoint tasks. In the first task, it is business as usual. Copy and paste the code above into the addOnload segment of the JS (in addition to the rest of the conjoint code). Then, two commands are key: `setEmbeddedData()` and `getEmbeddedData()`. I create a new variable, `attrorder` that saves the order from the first task like so: 
+      
+  * Sometimes, researchers would like to keep elements constant within subject, but allow them to vary across subjects. In the context of conjoint analysis, this means retaining the order of attributes across tasks for each respondent, while randomizing the order that they are presented per survey. To accomplish this, we can create an embedded data variable that captures the order, then pipe this variable into subsequent tasks. Say, your experiment consists of 2 conjoint tasks. In the first task, it is business as usual. Copy and paste the code above into the addOnload segment of the JS (in addition to the rest of the conjoint code). Then, two commands are key: `setEmbeddedData()` and `getEmbeddedData()`. I create a new variable, `attrorder` that saves the order from the first task like so: 
+  
       
 ```js
 // Store values as embedded data fields
 Qualtrics.SurveyEngine.setEmbeddedData('attrorder', attributes); 
 ```
+  
      
-    * Then, in the second task on the next survey page, you can omit the re-randomization of attributes and grab the order variable you created in the previous step. Note that this will not work unless the tasks are on separate pages, because the JS is executed and updated by page. Also, a friendly reminder that you also need to declare the embedded data variable in your Survey Flow (leaving the value empty).
+  * Then, in the second task on the next survey page, you can omit the re-randomization of attributes and grab the order variable you created in the previous step. Note that this will not work unless the tasks are on separate pages, because the JS is executed and updated by page. Also, a friendly reminder that you also need to declare the embedded data variable in your Survey Flow (leaving the value empty).
+  
      
 ```js
 // Attribute order from previous conjoint task
