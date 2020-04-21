@@ -14,6 +14,8 @@ nav_order: 6
 [Richard McElreath's Statistical Rethinking lectures](https://youtu.be/4WVelCswXo4)
 
 ### _Causal Inference_
+[Online Causal Inference Seminars](https://sites.google.com/view/ocis/home)
+
 [Michael DeCrescenzo's causal inference readling list](https://mikedecr.github.io/teaching/causal-inf-2019/)
 
 [Matt Blackwell's teaching material](https://mattblackwell.org/teaching/gov2002/)
@@ -22,6 +24,8 @@ nav_order: 6
 
 ### _General_
 [Brett Gall's power calculations for conjoint experiments](https://www.brettgall.com/post/conjoint-power-simulations/)
+
+<hr>
 
 ## Favourite podcast episodes
 
