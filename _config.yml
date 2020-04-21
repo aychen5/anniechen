@@ -23,7 +23,7 @@ email: aychen.555@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Welcome!
 baseurl: "anniechen" # the subpath of your site, e.g. /blog
-url: "https://aychen5.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://aychen5.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #url: "http://localhost:4000" # for local testing
 twitter_username: AYChen555
 github_username:  aychen5
@@ -33,6 +33,9 @@ github_username:  aychen5
 
 # Enable or disable the site search
 search_enabled: true
+# Google Analytics Tracking (optional)
+# e.g, UA-1234567-89
+#ga_tracking: UA-5555555-55
 
 # Set the search token separator for hyphenated-word search:
 search_tokenizer_separator: /[\s/]+/
@@ -41,6 +44,8 @@ search_tokenizer_separator: /[\s/]+/
 remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
+
+footer_content: "Copyright &copy; 2020 Annie Chen."
 
 # Exclude from processing.
 # The following items will not be processed, by default.

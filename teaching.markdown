@@ -30,6 +30,7 @@ nav_order: 3
 #### Instrumental Variables
 <a href="https://aychen5.github.io//anniechen/documents/iv.pdf" download = "lab7"> PDF </a>
 
+#### Regression Discontinuity Design 
 
 ### Causal Inference Q&A
 

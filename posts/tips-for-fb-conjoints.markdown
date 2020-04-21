@@ -7,11 +7,11 @@ mathjax: true
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
  
-The process of fielding a web survey can be split into two distinct components: using the service that hosts the survey and deployment of your survey on a distrbution platform. With many services (like Qualtrics), there often exists an option to combine these steps, so that you may be minimally concerned about the sampling process. This guide specifically tackles the practical implementation of conjoint experiments on Qualtrics disseminated through Facebook advertisements. 
+The process of fielding a web survey can be split into two distinct components: using the service that hosts the survey and deployment of your survey on a distrbution platform. With many services (like Qualtrics), there often exists an option to combine these steps, so that you may be minimally concerned about the sampling process. This three-part guide specifically tackles the practical implementation of conjoint experiments on Qualtrics using Facebook advertisements as a survey distribution mechanism. Along the way, we will take a brief detour (PART 2) to consider conjoints on mobile devices. 
 
 If you are reading this, I assume you have some knowledge of the aims of conjoint analysis, have deemed that this design is appropriate for your research goals, and seek the means to carry it out. I also assume that you have a working knowledge of Qualtrics. 
 
-Obligatory caveat: I am by no means an expert in web development. These tips are derived from my experience figuring out how to do this, and may not reflect the most efficient modes of implementation.
+Obligatory caveat: I am by no means an expert in web development. These tips are derived from my experience figuring out how to do this, and may not reflect the most efficient modes of implementation. I come at this from the perspective of a social scientist.
  
  
 ## PART 1: Building Conjoints in Qualtrics
@@ -58,7 +58,7 @@ for (i=0; i < attRaw.length; i++) {
 ```
       
       
-   + Sometimes, researchers would like to keep elements constant within subject, but allow them to vary across subjects. In the context of conjoint analysis, this means retaining the order of attributes across tasks for each respondent, while randomizing the order that they are presented per survey. To accomplish this, we can create an embedded data variable that captures the order, then pipe this variable into subsequent tasks. Say, your experiment consists of 2 conjoint tasks. In the first task, it is business as usual. Copy and paste the code above into the addOnload segment of the JS (in addition to the rest of the conjoint code). Then, two commands are key: `setEmbeddedData()` and `getEmbeddedData()`. I create a new variable, `attrorder` that saves the order from the first task like so: 
+      * Sometimes, researchers would like to keep elements constant within subject, but allow them to vary across subjects. In the context of conjoint analysis, this means retaining the order of attributes across tasks for each respondent, while randomizing the order that they are presented per survey. To accomplish this, we can create an embedded data variable that captures the order, then pipe this variable into subsequent tasks. Say, your experiment consists of 2 conjoint tasks. In the first task, it is business as usual. Copy and paste the code above into the addOnload segment of the JS (in addition to the rest of the conjoint code). Then, two commands are key: `setEmbeddedData()` and `getEmbeddedData()`. I create a new variable, `attrorder` that saves the order from the first task like so: 
   
       
 ```js
@@ -67,63 +67,23 @@ Qualtrics.SurveyEngine.setEmbeddedData('attrorder', attributes);
 ```
   
      
-   + Then, in the second task on the next survey page, you can omit the re-randomization of attributes and grab the order variable you created in the previous step. Note that this will not work unless the tasks are on separate pages, because the JS is executed and updated by page. Also, a friendly reminder that you also need to declare the embedded data variable in your Survey Flow (leaving the value empty).
+      * Then, in the second task on the next survey page, you can omit the re-randomization of attributes and grab the order variable you created in the previous step. Note that this will not work unless the tasks are on separate pages, because the JS is executed and updated by page. Also, a friendly reminder that you also need to declare the embedded data variable in your Survey Flow (leaving the value empty).
   
      
 ```js
 // Attribute order from previous conjoint task
 var attributes = Qualtrics.SurveyEngine.getEmbeddedData('attrorder');
 ```     
+   
  
  - [Shiny Application](https://medium.com/@joyplumeri/using-r-shiny-to-create-web-surveys-display-instant-feedback-and-store-data-on-google-drive-68f46eea0f8b): _"Flat broke, but I got time"_
  
    + Okay, so I include this option just to say that it is feasible. I've linked a more generic guide on creating and hosting surveys using a Shiny app (not a conjoint), and then storing responses on Google Drive. Perhaps not ideal for academic research (for security reasons), and usurps more time and effort than you'd like, but maybe worth exploring if you'd like to develop a new skill. 
 
- 
- 
-### ii) Optimizing conjoints for mobile devices
 
-Luckily, Qualtrics does most of the work for you. In general, Qualtrics automatically presents participants with a mobile-friendly version of your survey. There are even branching options that you can create in the Survey Flow specifically for participants on mobile. If you want to get fancy, it is also possible to "manually" manipulate the `CSS` such that you obtain the desired look for mobile devices. For example, using the `@media` rule. Check out [this](https://css-tricks.com/responsive-data-tables/) resource for more on creating responsive data tables.
-
-```css
-/* This is a striped table without an outer border */
-table tr td {
-  padding: 5px;
-}
-table td:last-child {
-    border-right: none;
-}
-tr:nth-of-type(odd) { 
-  background: #eee; 
-}
-/* Change the look for specific device */
-@media only screen and (max-width: 600px) {
-  table {
-    padding: 2px; 
-    ...
-  }
-}
-```
-
-
-
-### iii) Additional remarks
-
-
-
-
-##### _Stay tuned for PART 2, which will detail survey distribution through Facebook Advertising._ 
+#### _In [PART 2](https://aychen5.github.io//anniechen/posts/tips-for-fb-conjoints-2.html), we take a slight detour to discuss how to make web surveys mobile-friendly._ 
  
 {% comment %}
-### II. Facebook Targeted Advertising
- 
- 
- 
- - One word of caution: a challenge of relying on a social media platform is that researchers are at the mercy of its everchanging advertising guidelines, procedures, and algorithmic delivery system. 
- 
- - There already exist a few resources that detail the process:
- 
-  
-#### Cost 
+
 
 {% endcomment %}

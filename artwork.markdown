@@ -8,7 +8,6 @@ nav_order: 5
 ### I also enjoy painting! Oils and acrylics are my preferred media. 
 ### Here are some of the highlights:
 
-<br>
 
 ![floating-city](/images/floating_city.jpg)
 *(2015). One of my favourite memories from years ago, on a trip to Iquitos for my Peruvian then-roommate's wedding.*
