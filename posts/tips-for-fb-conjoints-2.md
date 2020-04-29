@@ -9,7 +9,7 @@ mathjax: true
 
 In [PART 1](https://aychen5.github.io//anniechen/posts/tips-for-fb-conjoints.html), we reviewed some of the ways to fashion conjoint experiments on Qualtrics. There is one more (optional, but recommended) step before we move on to survey circulation through Facebook -- designing conjoints for mobile distribution. 
 
-But first, an bligatory caveat, which should go without saying, but in case you skipped PART 1: I am not a mobile app developer. These are the lessons I've culled from my own limited experience and research on the topic. I come at this from the perspective of a social scientist. 
+But first, an obligatory caveat, which should go without saying, but in case you skipped PART 1: I am not a mobile app developer. These are the lessons I've culled from my own limited experience and research on the topic. I come at this from the perspective of a social scientist. 
 
 ## PART 2: Optimizing Conjoints for Mobile Devices
 

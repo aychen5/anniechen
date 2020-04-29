@@ -32,8 +32,16 @@ nav_order: 6
 #### BBC More or Less: Behind the Stats
 [Edith Abbott and crime statistics](https://www.bbc.co.uk/programmes/p07s22lh) 
 
+[The Simpsons and maths](bbc.co.uk/programmes/p07yjw8t)
+
 #### Casual Inference with Ellie Murray and Lucy D'Agostino McGowan
 [Internal and External Validity with Elizabeth Stuart | Episode 06](https://casualinfer.libsyn.com/internal-and-external-validity-with-elizabeth-stuart-episode-06-0) 
+
+#### Learning Bayesian Statistics
+[#14 Hidden Markov Models & Statistical Ecology, with Vianey Leos-Barajas](https://learnbayesstats.anvil.app/)
+
+#### Linear Digressions
+[Better know a distribution: the Poisson distribution](http://lineardigressions.com/)
 
 #### NPR Planet Money 
 [Episode 898: Happy Fed Independence Day](https://www.npr.org/sections/money/2019/03/01/699546781/episode-898-happy-fed-independence-day) 
