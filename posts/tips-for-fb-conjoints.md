@@ -76,12 +76,15 @@ Qualtrics.SurveyEngine.setEmbeddedData('attrorder', attributes);
 // Attribute order from previous conjoint task
 var attributes = Qualtrics.SurveyEngine.getEmbeddedData('attrorder');
 ```     
+
+   + If you need to test the Javascript line by line, the easiest way would be to open the inspect feature in your browser. In Google Chrome, right click on any webpage and select "inspect" from the dropdown pop-up. Then, navigate to the "Console" tab on top to open Chrome's Developer Console (or, `option+command+i` on a Mac). Not only is this is a great way to test what your code is doing, it is also an excellent starting point for debugging when something goes awry. _Why isn't my code working in Qualtrics?_ Open up the Developer Console to view error messages. Though, this can only take you so far because Qualtrics uses its own set of functions (like the ones in the code chunks above). More generally, [jsfiddle](https://jsfiddle.net/) might be a useful tool to see how your JS pairs with the HTML/CSS.
+
    
 #### __"Flat broke, but I got time"__
 
- - [Shiny Application](https://medium.com/@joyplumeri/using-r-shiny-to-create-web-surveys-display-instant-feedback-and-store-data-on-google-drive-68f46eea0f8b): 
+ - [Shiny Application](https://rpubs.com/msteiner/ShinyPsych_SurveyTutorial): 
  
-   + Okay, so I include this option just to say that it is feasible. I've linked a more generic guide on creating and hosting surveys using a Shiny app (not a conjoint), and then storing responses on Google Drive. Perhaps not ideal for academic research (for security reasons), and usurps more time and effort than you'd like, but maybe worth exploring if you'd like to develop a new skill. 
+   + Okay, so I include this option just to say that it is feasible. I've linked a more generic guide on creating and hosting surveys through a Shiny app (not a conjoint), and then storing responses on Dropbox. There's an R package for this, `ShinyPsych`. Perhaps not ideal for academic research (for security reasons and some server-side crashing issues), and usurps more time and effort than you'd like, but maybe worth exploring for the kicks. 
 
 <br>
 
