@@ -30,10 +30,6 @@ Before coming to McGill, I received a BA at the University of Toronto, where I d
 That's me! 
 </div>
 
-{% comment %}
- <img src="a.jpg" onmouseover="this.src='b.jpg'" onmouseout="this.src='a.jpg'" />
-{% endcomment %}
-
 <div style="text-align: center">
 
 <a href="https://github.com/aychen5" target="_blank"><button class="btn"><i class="fab fa-github"></i> Github</button></a>
