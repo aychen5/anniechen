@@ -37,6 +37,9 @@ nav_order: 6
 #### Casual Inference with Ellie Murray and Lucy D'Agostino McGowan
 [Internal and External Validity with Elizabeth Stuart | Episode 06](https://casualinfer.libsyn.com/internal-and-external-validity-with-elizabeth-stuart-episode-06-0) 
 
+#### Checks and Balances
+[Law law land—how America’s Supreme Court became political](https://www.economist.com/podcasts/2020/05/15/law-law-land-how-americas-supreme-court-became-political)
+
 #### Learning Bayesian Statistics
 [#14 Hidden Markov Models & Statistical Ecology, with Vianey Leos-Barajas](https://learnbayesstats.anvil.app/)
 
