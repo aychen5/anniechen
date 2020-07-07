@@ -27,7 +27,7 @@ url: "https://aychen5.github.io" # the base hostname & protocol for your site, e
 #url: "http://localhost:4000" # for local testing
 twitter_username: AYChen555
 github_username:  aychen5
-#color_scheme: "dark"
+color_scheme: "dark"
 
 #logo: "/images/shrug_logo.ico"
 
@@ -67,6 +67,9 @@ footer_content: "Copyright &copy; 2020 Annie Chen."
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+include:
+    - Gemfile.lock
 
 #theme: jekyll-theme-minimal
 
