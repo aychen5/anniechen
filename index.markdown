@@ -22,17 +22,16 @@ Before coming to McGill, I received a BA at the University of Toronto, where I d
 
 ![profile-picture](/images/PF.jpg){:height="400px" width="200px"}
 
- <img src="a.jpg" onmouseover="this.src='b.jpg'" onmouseout="this.src='a.jpg'" />
 
 <br>
 
 <script src="https://kit.fontawesome.com/c6b0f9749c.js" crossorigin="anonymous"></script>
-
-
-{% comment %}
 <div style="text-align: center">
 That's me! 
 </div>
+
+{% comment %}
+ <img src="a.jpg" onmouseover="this.src='b.jpg'" onmouseout="this.src='a.jpg'" />
 {% endcomment %}
 
 <div style="text-align: center">
@@ -40,6 +39,7 @@ That's me!
 <a href="https://github.com/aychen5" target="_blank"><button class="btn"><i class="fab fa-github"></i> Github</button></a>
 <a href="https://twitter.com/AYChen555" target="_blank"><button class="btn"><i class="fab fa-twitter"></i> Twitter</button></a>
 <a href="https://drive.google.com/file/d/1agsNASFQreKcUVi9ghwtJKbI5lwDEPbf/view?usp=sharing" target="_blank"><button class="btn"><i class="fa fa-file-pdf-o"></i> CV</button></a>
+
 
 </div>
 
