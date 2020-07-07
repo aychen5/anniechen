@@ -22,6 +22,8 @@ Before coming to McGill, I received a BA at the University of Toronto, where I d
 
 ![profile-picture](/images/PF.jpg){:height="400px" width="200px"}
 
+ <img src="a.jpg" onmouseover="this.src='b.jpg'" onmouseout="this.src='a.jpg'" />
+
 <br>
 
 <script src="https://kit.fontawesome.com/c6b0f9749c.js" crossorigin="anonymous"></script>
